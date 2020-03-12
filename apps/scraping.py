@@ -8,9 +8,9 @@ import datetime as dt
 
 def scrape_all():
     # Set the executable path and initialize the chrome browser in splinter
-    #executable_path = {'executable_path': '/usr/local/bin/chromedriver'} 
+    executable_path = {'executable_path': '/usr/local/bin/chromedriver'} 
     # Initiate headless driver for deployment
-    browser = Browser("chrome", executable_path="chromedriver", headless=True)
+    browser = Browser("chrome", **executable_path, headless=True)
     news_title, news_paragraph = mars_news(browser)
 
     # Run all scraping functions and store results in dictionary
@@ -21,6 +21,8 @@ def scrape_all():
       "facts": mars_facts(),
       "last_modified": dt.datetime.now()
     }
+
+    return data
 
 # Set the executable path and initialize the chrome browser in splinter
 #executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
