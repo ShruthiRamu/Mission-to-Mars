@@ -76,14 +76,9 @@
         <a href="http://127.0.0.1:5000/thumbnails" class="alert-link">thumbnails</a>. Click if you want to see the hemisphere thumbnails
       </div>
 
-      <div class="row">
-        <div class="col-sm" style="background-color:lavender;">Small Devices</div>
-        <div class="col-md" style="background-color:orange;">Medium Devices</div>
-        <div class="col-lg" style="background-color:red;">Large Devices</div>
-      </div>
-
+  
       <!-- Add section for Mars News -->
-      <div class="row" id="mars-news">
+      <div class="row" id="mars-news" style="background-color:orange;">
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
@@ -96,8 +91,8 @@
       </div>
 
       <!-- Section for Featured Image and Facts table -->
-      <div class="row" id="mars-featured-image">
-        <div class="col-md-8">
+      <div class="row" id="mars-featured-image" style="background-color:red;">
+        <div class="col-sd" >
           <h2>Featured Mars Image</h2>
 
           <!-- if images is False/None/non-existent, then default to error message -->
@@ -110,7 +105,7 @@
 
         <div class="col-md-4">
           <!-- Mars Facts -->
-          <div class="row" id="mars-facts">
+          <div class="row" id="mars-facts" style="background-color:lavender;">
             <div class="col-md-12">
               <h4>Mars Facts</h4>
               {{ mars.facts | safe }}
